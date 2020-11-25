@@ -1,4 +1,4 @@
-export const modalReducer = (state = { open: false }, action) => {
+export const modalReducer = (state = {}, action) => {
   switch (action.type) {
     case "SET_OPEN":
       return {

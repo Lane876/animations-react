@@ -8,7 +8,7 @@ import Third from "./screens/Third";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Navbar showBelow={200} />
       <TopButton showBelow={400} />
       <First />
       <Second />

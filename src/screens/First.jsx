@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import RespCarousel from "../components/Carousel";
 import Gallery from "../components/Gallery";
 
 const First = () => {
@@ -36,7 +35,6 @@ const First = () => {
           alignItems: "center",
         }}
       >
-        {/* <RespCarousel /> */}
         <Gallery />
       </div>
     </div>

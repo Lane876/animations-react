@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import RespCarousel from "./Carousel";
+import RespCarousel from "./RespCarousel";
 import { useDispatch, useSelector } from "react-redux";
 
 const backdrop = {
@@ -15,9 +15,22 @@ const backdrop = {
   },
 };
 
-const Modal = ({ selectedImage }) => {
+const Modal = ({ images }) => {
   const dispatch = useDispatch();
   const { open } = useSelector((state) => state.showModal);
+
+  useEffect(() => {
+    if (open) {
+      const body = document.body;
+      body.style.position = "fixed";
+    } else {
+      const body = document.body;
+      const scrollY = body.style.top;
+      body.style.position = "";
+      body.style.top = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+    }
+  }, [open]);
 
   return (
     <AnimatePresence
@@ -32,7 +45,7 @@ const Modal = ({ selectedImage }) => {
           animate="visible"
           exit="hidden"
         >
-          <RespCarousel selectedImage={selectedImage} />
+          <RespCarousel images={images} />
         </motion.div>
       )}
     </AnimatePresence>

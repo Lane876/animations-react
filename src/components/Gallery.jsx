@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./gallery.css";
 import one from "../images/wallpaperflare.com_wallpaper1.jpg";
 import two from "../images/wallpaperflare.com_wallpaper2.jpg";
 import three from "../images/wallpaperflare.com_wallpaper3.jpg";
@@ -22,9 +21,9 @@ export default function App() {
   }, [dispatch, selectedImg]);
 
   return (
-    <div className="App">
-      <div className="container">
-        <Modal />
+    <div>
+      <div className="gallery_container">
+        <Modal images={images} />
         <img
           src={selectedImg}
           alt="Selected"

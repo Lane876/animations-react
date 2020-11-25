@@ -5,23 +5,24 @@
 }
 
 .first {
-  height: 100vh;
+  height: calc(100vh + 50px);
   background: teal;
-  overflow: hidden;
   display: flex;
   justify-content: space-around;
   align-items: left;
   flex-direction: column;
+  overflow: hidden;
 }
 .caurosel {
   max-width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .second {
-  height: 100vh;
+  /* height: 100vh; */
   width: 80%;
   margin: auto;
   background-color: wheat;
@@ -29,10 +30,11 @@
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
+  height: calc(100vh + 80px);
 }
 
 .third {
-  height: 100vh;
+  height: calc(100vh + 80px);
   background-color: tomato;
 }
 
@@ -43,16 +45,66 @@
   height: 100%;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  height: 50px;
+  z-index: 10;
+  transition: all 0.5s ease-in;
+}
+.navbar.change {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.7);
+  height: 80px;
+  z-index: 10;
+  transition: all 0.5s ease-in;
+}
+
 .navbarlinks {
   display: flex;
-  position: fixed;
   cursor: pointer;
-  color: red;
+  color: white;
+  font-size: x-large;
   z-index: 10;
+  transition: all 0.5s ease-in;
+}
+
+.logo {
+  font-size: x-large;
+  color: white;
+  transition: all 0.5s ease-in;
+}
+
+.logo.change {
+  transition: all 0.5s ease-in;
+  font-size: xx-large;
 }
 
 .navbarlinks div {
-  padding-right: 1rem;
+  padding-right: 1.5rem;
+}
+
+.navbarlinks.change {
+  font-size: xx-large;
+  transition: all 0.5s ease-in;
+}
+
+@media screen and (max-width: 600px) {
+  .navbarlinks {
+    display: none;
+  }
 }
 
 .tothetop {
@@ -73,7 +125,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  /* transform: translate(-50%, -50%); */
   width: 100%;
   height: 100%;
   z-index: 11;
@@ -85,8 +136,43 @@
 
 .closemodal {
   cursor: pointer;
-  align-self: flex-start;
+  align-self: flex-end;
   padding: 1rem;
   font-weight: 900;
   font-size: x-large;
+}
+
+.gallery_container img {
+  display: block;
+  cursor: pointer;
+}
+
+.gallery_container {
+  max-width: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gallery_container .selected {
+  max-width: 500px;
+  /* height: 300px; */
+  margin: 0 auto;
+  border: 4px solid purple;
+}
+
+.gallery_container .imgContainer {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 0 0 0;
+}
+
+.gallery_container .imgContainer img {
+  max-width: 100px;
+  margin: 5px 0;
+  display: block;
+  cursor: pointer;
 }
