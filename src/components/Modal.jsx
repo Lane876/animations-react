@@ -22,13 +22,10 @@ const Modal = ({ images }) => {
   useEffect(() => {
     if (open) {
       const body = document.body;
-      body.style.position = "fixed";
+      body.style = "overflow: hidden";
     } else {
       const body = document.body;
-      const scrollY = body.style.top;
-      body.style.position = "";
-      body.style.top = "";
-      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      body.style = "";
     }
   }, [open]);
 
