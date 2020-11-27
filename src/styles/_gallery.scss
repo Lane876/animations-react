@@ -1,0 +1,33 @@
+.gallery_container {
+  max-width: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    display: block;
+    cursor: pointer;
+  }
+
+  .selected {
+    max-width: 500px;
+    margin: 0 auto;
+    border: 4px solid purple;
+  }
+
+  .imgContainer {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 0 0 0;
+
+    img {
+      max-width: 100px;
+      margin: 5px 0;
+      display: block;
+      cursor: pointer;
+    }
+  }
+}

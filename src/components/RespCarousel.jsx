@@ -7,7 +7,7 @@ const RespCarousel = ({ images }) => {
   const dispatch = useDispatch();
   const image = useSelector((state) => state.showImage.img);
 
-  const result = images.filter((img) => image != img);
+  const result = images.filter((img) => image !== img);
   result.unshift(image);
 
   return (
@@ -21,7 +21,7 @@ const RespCarousel = ({ images }) => {
 
       <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
         {result.map((img, i) => (
-          <img src={img} key={i} />
+          <img src={img} key={i} alt="img" />
         ))}
       </Carousel>
     </div>
