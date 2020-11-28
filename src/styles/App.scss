@@ -10,16 +10,29 @@
 
 .dark {
   .first {
-    background-color: black;
+    background-color: #1a1919;
     transition: background-color 0.25s ease-in;
+    color: white;
+  }
+  .navbarlinks {
+    color: white;
+  }
+  .logo {
+    color: wheat;
   }
 }
 
 .light-mode {
   .first {
-    background-color: gray;
+    background-color: white;
     color: #333;
     transition: background-color 0.25s ease-out;
+  }
+  .navbarlinks {
+    color: #333;
+  }
+  .logo {
+    color: #333;
   }
 }
 
@@ -109,4 +122,5 @@
   padding: 1rem;
   font-weight: 900;
   font-size: x-large;
+  color: #333;
 }

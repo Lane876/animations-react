@@ -42,7 +42,11 @@ const Navbar = ({ showBelow, darkMode, setDarkMode }) => {
 
   return (
     <div className={`navbar ${navbarChange}`}>
-      <div className={`logo ${navbarChange}`}>LOGO</div>
+      {/* <div className={`logo ${navbarChange}`}> */}
+      <a href="#" className="logo">
+        LOGO
+      </a>
+      {/* </div> */}
       <div className={`navbarlinks ${navbarChange} ${mobile}`}>
         <div className="link">
           <Link

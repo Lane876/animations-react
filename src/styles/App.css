@@ -46,7 +46,6 @@
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  color: white;
   font-size: large;
   z-index: 10;
   -webkit-transition: all 0.5s ease-in;
@@ -96,7 +95,16 @@
   }
 }
 
-.toggle {
+.toggle-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+.toggle-container .toggle {
   position: relative;
   padding: 0 4px;
   display: -webkit-box;
@@ -107,7 +115,7 @@
           align-items: center;
 }
 
-input[type="checkbox"].checkbox {
+.toggle-container .toggle input[type="checkbox"].checkbox {
   width: 40px;
   height: 10px;
   background: #555;
@@ -121,15 +129,7 @@ input[type="checkbox"].checkbox {
   outline: none;
 }
 
-input[type="checkbox"].checkbox:checked + label {
-  left: 30px;
-}
-
-input[type="checkbox"].checkbox:focus-visible {
-  outline: solid 2px white;
-}
-
-input[type="checkbox"].checkbox + label {
+.toggle-container .toggle input[type="checkbox"].checkbox + label {
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -144,13 +144,15 @@ input[type="checkbox"].checkbox + label {
   background-color: cyan;
 }
 
-.toggle-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.toggle-container .toggle input[type="checkbox"].checkbox:checked + label {
+  left: 30px;
 }
 
-.toggle-container > span {
+.toggle-container .toggle input[type="checkbox"].checkbox:focus-visible {
+  outline: solid 2px white;
+}
+
+.toggle-container span {
   font-size: 1.2em;
   background: none;
   border: none;
@@ -161,7 +163,7 @@ input[type="checkbox"].checkbox + label {
   margin-right: 2px;
 }
 
-.toggle-container > span:last-child {
+.toggle-container span:last-child {
   margin-top: 5px;
 }
 
@@ -220,16 +222,33 @@ input[type="checkbox"].checkbox + label {
 }
 
 .dark .first {
-  background-color: black;
+  background-color: #1a1919;
   -webkit-transition: background-color 0.25s ease-in;
   transition: background-color 0.25s ease-in;
+  color: white;
+}
+
+.dark .navbarlinks {
+  color: white;
+}
+
+.dark .logo {
+  color: wheat;
 }
 
 .light-mode .first {
-  background-color: gray;
+  background-color: white;
   color: #333;
   -webkit-transition: background-color 0.25s ease-out;
   transition: background-color 0.25s ease-out;
+}
+
+.light-mode .navbarlinks {
+  color: #333;
+}
+
+.light-mode .logo {
+  color: #333;
 }
 
 .first {
@@ -361,5 +380,6 @@ input[type="checkbox"].checkbox + label {
   padding: 1rem;
   font-weight: 900;
   font-size: x-large;
+  color: #333;
 }
 /*# sourceMappingURL=App.css.map */
