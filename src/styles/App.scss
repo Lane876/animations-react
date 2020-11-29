@@ -38,13 +38,13 @@
 
 .first {
   height: calc(100vh + 80px);
-  background: teal;
   display: flex;
   justify-content: space-around;
   align-items: left;
   flex-direction: column;
   overflow: hidden;
 }
+
 .caurosel {
   max-width: 60%;
   display: flex;

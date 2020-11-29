@@ -21,7 +21,7 @@ const First = () => {
   return (
     <div className="first">
       <div className="first-animation">
-        <p>
+        <p className="circle">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Necessitatibus neque dolores ipsum rerum. Voluptatem reprehenderit hic
           fugit commodi nihil, itaque repudiandae tempore eius molestias

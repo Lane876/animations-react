@@ -5,24 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: none;
 }
 
 a {
   text-decoration: none;
 }
 
-/* .cursor {
+.cursor {
   z-index: 1000;
   background-color: red;
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid red;
   pointer-events: none;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
   position: fixed;
-} */
+}
 .secondary-cursor {
   z-index: 1000;
   width: 40px;
